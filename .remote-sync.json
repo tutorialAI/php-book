@@ -1,0 +1,19 @@
+{
+  "logger": {
+    "title": "Remote Sync"
+  },
+  "transport": "ftp",
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "ftp46.hostland.ru",
+  "port": "21",
+  "target": "/ttestt.ru/htdocs/",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "host1702102",
+  "password": "8Nv7zpCn",
+  "watch": []
+}

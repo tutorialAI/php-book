@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ajax Form with email Attachment using PHP - AV Square Technologies</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+<div class="container">
+    <div id="modal-callback">
+      <div class="callback_popup">
+        <div class="text-center"><p>Прикрепить реквизиты</p></div>
+        <form action="" class="callback_form-header" style="background: #333">
+          <div class="form-group row callback-inputs">
+            <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6 name-line">
+              <input type="text" name="name" value="" placeholder="Имя" id="input-name" class="form-control" required>
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-6 col-lg-6 phone-line">
+              <input type="text" name="phone" class="form-control" id="inputNumber" placeholder="+7 968 988 65 45" required type="phone">
+            </div>
+          </div>
+          <div class="file_upload-container" style="float: left;">
+          <label for="file-upload" class="custom-file text-center" id="file_upload-0">
+            <div class="file-upload-image flex">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="40px" height="40px">
+              <g>
+                <g>
+                  <path d="M404.898,197.013c-4.328,0-7.837,3.508-7.837,7.837s3.509,7.837,7.837,7.837c33.13,0,60.082,29.034,60.082,64.721    c0,4.329,3.509,7.837,7.837,7.837c4.328,0,7.837-3.508,7.837-7.837C480.653,233.079,446.67,197.013,404.898,197.013z" fill="#FFFFFF"/>
+                </g>
+              </g>
+              <g>
+                <g>
+                  <path d="M404.898,165.666h-22.479c-5.556-28.943-20.198-55.339-41.685-74.914C317.272,69.377,287.18,57.604,256,57.604    s-61.272,11.773-84.734,33.148c-21.487,19.575-36.129,45.971-41.685,74.914h-22.479C48.045,165.666,0,215.793,0,277.407    C0,339.023,48.045,389.15,107.102,389.15h102.552v45.561c0,10.855,8.831,19.686,19.686,19.686h53.32    c10.854,0,19.686-8.83,19.686-19.686V389.15h102.553C463.955,389.15,512,339.022,512,277.407    C512,215.793,463.955,165.666,404.898,165.666z M294.509,347.775c-4.328,0-7.837,3.508-7.837,7.837v79.1    c0,2.212-1.8,4.012-4.012,4.012h-53.32c-2.212,0-4.012-1.8-4.012-4.012v-79.1c0-4.329-3.509-7.837-7.837-7.837h-36.252    c-1.486,0-2.841-0.812-3.54-2.126c-0.699-1.311-0.62-2.892,0.205-4.121l74.756-111.355c0.751-1.116,2-1.783,3.339-1.783    c1.339,0,2.583,0.664,3.329,1.776l74.763,111.363c0.828,1.232,0.907,2.81,0.208,4.12c-0.699,1.311-2.055,2.125-3.539,2.125    H294.509z M404.898,373.477H302.345v-10.029h28.415c7.285,0,13.941-3.995,17.368-10.424c3.431-6.431,3.038-14.186-1.026-20.234    l-74.76-111.359c-3.661-5.458-9.771-8.716-16.343-8.716c-6.566,0-12.676,3.255-16.348,8.713l-74.763,111.365    c-4.056,6.05-4.447,13.802-1.023,20.222c3.422,6.434,10.079,10.432,17.375,10.432h28.415v10.029H107.102    c-50.414,0-91.429-43.097-91.429-96.069s41.014-96.068,91.429-96.068h29.116c3.905,0,7.213-2.875,7.759-6.741    c3.952-27.965,17.391-53.627,37.844-72.261C202.39,83.598,228.734,73.277,256,73.277s53.61,10.32,74.178,29.061    c20.453,18.634,33.892,44.296,37.844,72.261c0.547,3.866,3.855,6.741,7.759,6.741h29.116c50.414,0,91.429,43.096,91.429,96.068    C496.327,330.379,455.312,373.477,404.898,373.477z" fill="#FFFFFF"/>
+                </g>
+              </g>
+              </svg>
+            </div>
+            <input id="file-upload" type="file">
+          </label>
+          </div>
+            <div class="add_file">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 485 485" style="enable-background:new 0 0 485 485;" xml:space="preserve" width="30px" height="30px">
+              <g>
+                <path d="M0,0v485h485V0H0z M455,455H30V30h425V455z" fill="#FFFFFF"/>
+                <polygon points="227.5,374.133 257.5,374.133 257.5,257.5 374.135,257.5 374.135,227.5 257.5,227.5 257.5,110.867 227.5,110.867    227.5,227.5 110.865,227.5 110.865,257.5 227.5,257.5  " fill="#FFFFFF"/>
+              </svg>
+            </div>
+          <div class="form-group clear row " style="margin-bottom: 0px">
+            <label class="custom-file col-sm-12 col-xs-12">
+              <button type="submit" class="btn btn-primary col-sm-12 col-xs-12" style="margin: 10px 0px 0px;" id="send_message" onclick="sendMail('.callback_form-header');return false;">Отправить</button>
+            </label>
+          </div>
+      </form>
+      </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+  var count = 1;
+  // input line
+  $('.callback_popup').delegate('input[type="file"]','change',function(){
+    $(this).parent().find('.file-upload-image svg path').css({'fill': '#bbff5b'});
+  });
+
+  $('.add_file').click(function(){
+    if($('.custom-file').length < 6){
+      $('#file_upload-0').clone().attr('id',function(i,val){
+        return "file_upload-"+ count;
+      }).attr('for',function(i,val){
+        return "file-upload-"+ count;
+      }).appendTo(".file_upload-container");
+      $('#file_upload-'+count).find('input').attr('id',function(){
+        return "file-upload-"+ count;
+      });
+    }
+    count++;
+  });
+
+function sendMail(form_name){
+
+    //data to be sent to server
+    var m_data = new FormData();
+
+    var proceed = true,inputs = false;
+    var phone = $(form_name).find('input[name="phone"]');
+    var name = $(form_name).find('input[name="name"]');
+
+  var items = $('.callback_form-header').find('input[type="file"]');
+  // for(var i = 0; i < items.length; i++){
+  //   m_data.append('file_'+i,items[i].files[0]);
+  // }
+
+    m_data.append('file_attach',items.files[0]);
+
+    m_data.append( 'phone_name', phone.val());
+    m_data.append( 'first_name', name.val());
+        $.ajax({
+            url: 'process.php',
+            data: m_data,
+            processData: false,
+            contentType: false,
+            type: 'POST',
+            dataType:'json',
+            success: function(response){
+                //load json data from server and output message
+                if(response.type == 'error'){ //load json data from server and output message
+                    console.log(response);
+                }else{
+                    console.log(response);
+                }
+            }
+        });
+    return false;
+};
+
+</script>
+
+
+</body>
+</html>
